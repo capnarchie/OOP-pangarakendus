@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-public class Konto {
+public class Konto extends Inimene{
     double kontojääk;
     double eelmineÜlekanne;
-    String kasutajaNimi;
-    String kontonr;
-
 
     public Konto(String kasutajaNimi, String kontonr) {
-        this.kasutajaNimi = kasutajaNimi;
-        this.kontonr = kontonr;
+        super(kasutajaNimi, kontonr);
+    }
+
+    public String getKontonr() {
+        return kontonr;
     }
 
     void rahaÜlekanne(double kogus){
@@ -34,34 +34,42 @@ public class Konto {
         }else System.out.println("Ülekannet pole veel toimunud");
     }
 
+
     void näitavalikuid() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Teretulemast Swedbanki " + kasutajaNimi);
-        System.out.println("teie kontonr on " + kontonr);
-        System.out.println("mida te soovite teha?");
-        System.out.println("valikud on: 1) Vaatan kontojääki, 2) Kannan kontole raha, 3) Võtan kontolt raha välja, 4) Vaatan viimast tehingut, 5) Logi välja");
+        System.out.println("Tere tulemast " + Main.misPank(kontonr) + " pangalehele " + kasutajaNimi);
+        System.out.println("Teie kontonr on " + kontonr);
+        System.out.println("Mida te soovite teha?");
+        System.out.println("Menüü: 1) Vaatan kontojääki, 2) Kannan kontole raha, 3) Võtan kontolt raha välja, 4) Vaatan viimast tehingut, 5) Logi välja");
 
 
         int vastus;
         do {
-            System.out.println("valiku tegemiseks kirjutage vastav number ");
+            System.out.println("Valiku tegemiseks kirjutage vastav number ");
             vastus = sc.nextInt();
 
 
             switch (vastus) {
                 case 1:
-                    System.out.println("kontojääk on " + kontojääk + " eurot");
+                    System.out.println("Kontojääk on " + kontojääk + " eurot");
                     break;
                 case 2:
-                    System.out.println("Sisestage kogus mida soovite kontole kanda");
+                    System.out.println("Sisestage kogus, mida soovite kontole kanda");
                     double kantavKogus = sc.nextDouble();
                     rahaÜlekanne(kantavKogus);
                     break;
                 case 3:
-                    System.out.println("Sisestage kogus mida soovite kontolt välja võtta");
+                    System.out.println("Sisestage kogus, mida soovite kontolt välja võtta");
                     double väljavõetavKogus = sc.nextDouble();
-                    võtanRahavälja(väljavõetavKogus);
-                    break;
+                    if (kontojääk-väljavõetavKogus <= 0){
+                        System.out.println("Summat ei saa välja võtta, pole piisavalt vabu vahendeid");
+                        break;
+                    }
+                    else{
+                        võtanRahavälja(väljavõetavKogus);
+                        break;
+                    }
+
                 case 4:
                     näitaÜlekannet();
                     break;
