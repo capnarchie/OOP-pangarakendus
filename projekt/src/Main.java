@@ -4,12 +4,26 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        Konto toomas = new Konto(kasutajanimi(), kontonumber());
-        toomas.näitavalikuid();
-
+        Konto konto = new Konto(kasutajanimi(), KontoOlemasolu());//kontonumber());
+        konto.näitavalikuid();
 
 
     }
+
+    public static String KontoOlemasolu(){
+        int vastus = JOptionPane.showOptionDialog(new JFrame(), "Kas teil on kontonumber?", "Eksisteeriv kasutaja?",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+                new Object[] { "Jah", "Ei" }, JOptionPane.YES_OPTION);
+        if (vastus == JOptionPane.YES_OPTION) {
+            return kontonumber();
+        }
+        else if (vastus == JOptionPane.NO_OPTION){
+            kontroNR();
+        }
+        return kontroNR();
+    }
+
+
     public static String kasutajanimi() {
         String sisestatakse = JOptionPane.showInputDialog(null, "Sisesta enda kasutajanimi ", "Andmete sisestamine",
                 JOptionPane.QUESTION_MESSAGE);

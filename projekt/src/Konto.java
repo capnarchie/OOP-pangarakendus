@@ -76,7 +76,8 @@ public class Konto extends Inimene{
                 case 5:
                     break;
             }
-        }while (vastus != 5);
+        }
+        while (vastus != 5);
         System.out.println("Logisite välja");
     }
 
