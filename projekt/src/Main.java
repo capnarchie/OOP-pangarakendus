@@ -9,7 +9,7 @@ public class Main {
 
 
     }
-
+        //kasutaja dialoog jah/ei küsimuseks
     public static String KontoOlemasolu(){
         int vastus = JOptionPane.showOptionDialog(new JFrame(), "Kas teil on kontonumber?", "Eksisteeriv kasutaja?",
                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
@@ -34,7 +34,7 @@ public class Main {
                 JOptionPane.QUESTION_MESSAGE);
         return sisestatakse;
     }
-
+        //genereerib kasutajale suvalise kontonumbri kui vastatud "ei" kontoOlemasolu dialoogis
     public static String kontroNR(){
         String[] jada = new String[9];
         jada[0] = "EE";
@@ -47,14 +47,14 @@ public class Main {
 
         return kontonumber;
     }
-
+        //genereerib kasutajale suvalise panga poolt konto
     public static String suvaline(){
         String[] pangad = {"10", "22", "77"};
         int index = (int) (Math.random()*(2-0)+0);
         String pangainitsiatiiv = pangad[index];
         return pangainitsiatiiv;
     }
-
+        //tuvastab mis pangaga on tegemist
     public static String misPank(String kontonr){
 
         String[] loend = kontonr.split("", kontonr.length());

@@ -11,21 +11,21 @@ public class Konto extends Inimene{
     public String getKontonr() {
         return kontonr;
     }
-
+        //funktsioon raha ülekandmiseks
     void rahaÜlekanne(double kogus){
-        if (kogus != 0){
+        if (kogus != 0 && kogus < 0){
             kontojääk = kontojääk + kogus;
             eelmineÜlekanne = kogus;
         }
     }
-
+        //funktsioon raha väljavõtmiseks
     void võtanRahavälja(double kogus){
-        if (kogus != 0){
+        if (kogus != 0 && kogus < 0){
             kontojääk = kontojääk - kogus;
             eelmineÜlekanne = -kogus;
         }
     }
-
+        //funktsioon viimase ülekande tüübi näitamiseks
     void näitaÜlekannet(){
         if (eelmineÜlekanne > 0) {
             System.out.println("kandsite kontole " + eelmineÜlekanne + "eurot");
@@ -34,7 +34,7 @@ public class Konto extends Inimene{
         }else System.out.println("Ülekannet pole veel toimunud");
     }
 
-
+        //funktsioon panga valikute näitamiseks
     void näitavalikuid() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Tere tulemast " + Main.misPank(kontonr) + " pangalehele " + kasutajaNimi);
