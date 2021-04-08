@@ -1,40 +1,35 @@
 import java.util.Scanner;
 
 public class Konto extends Inimene{
-    double kontojääk;
     double eelmineÜlekanne;
 
     public Konto(String kasutajaNimi, String kontonr) {
         super(kasutajaNimi, kontonr);
     }
 
-    public String getKontonr() {
-        return kontonr;
-    }
-        //funktsioon raha ülekandmiseks
     void rahaÜlekanne(double kogus){
-        if (kogus != 0 && kogus < 0){
+        if (kogus != 0){
             kontojääk = kontojääk + kogus;
             eelmineÜlekanne = kogus;
         }
     }
-        //funktsioon raha väljavõtmiseks
+
     void võtanRahavälja(double kogus){
-        if (kogus != 0 && kogus < 0){
+        if (kogus != 01){
             kontojääk = kontojääk - kogus;
             eelmineÜlekanne = -kogus;
         }
     }
-        //funktsioon viimase ülekande tüübi näitamiseks
+
     void näitaÜlekannet(){
         if (eelmineÜlekanne > 0) {
-            System.out.println("kandsite kontole " + eelmineÜlekanne + "eurot");
+            System.out.println("Kandsite kontole " + eelmineÜlekanne + "eurot");
         }else if (eelmineÜlekanne < 0){
-            System.out.println("võtsite kontolt välja " + Math.abs(eelmineÜlekanne) + "eurot");
-        }else System.out.println("Ülekannet pole veel toimunud");
+            System.out.println("Võtsite kontolt välja " + Math.abs(eelmineÜlekanne) + " eurot");
+        }else System.out.println("Ülekannet pole täna toimunud.");
     }
 
-        //funktsioon panga valikute näitamiseks
+
     void näitavalikuid() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Tere tulemast " + Main.misPank(kontonr) + " pangalehele " + kasutajaNimi);
@@ -45,7 +40,7 @@ public class Konto extends Inimene{
 
         int vastus;
         do {
-            System.out.println("Valiku tegemiseks kirjutage vastav number ");
+            System.out.println("Valiku tegemiseks kirjutage vastav number: ");
             vastus = sc.nextInt();
 
 
