@@ -1,4 +1,8 @@
 # OOP-pangarakendus
+
+Rühmatöö 1
+-----------
+
 OOP kursuse projekt
 Programmi autoriteks on Uku Ilves ja Mairi Dubik. Projektiks on lihtsam 
 
@@ -22,3 +26,13 @@ Uku lõi klassi Konto ning sellega vajalikud asjad main klassi ning Mairi lõi M
 Circa kulus Ukul 4h tööle.
 
 Mairi lõi klassi Inimene ja sidus selle Konto klassiga, et oleks arusaaadavam. MAiril kulus tööks umbes 5h, sest oli palju mõtlemist.
+
+
+
+Rühmatöö 2
+----------
+
+Uku lisas juurde graafilise kasutajaliidese ja natuke erindipüüdmist vale sisestuse korral kokku kulus circa 10h, muredeks eestikeelne programmeerimine ja klassidevaheline ühilduvuse saavutamine JavaFX ja swing vahede mitte tundmine ning üldine kogemuse puudumine graafikaga. Töö vajaks pigem andmebaasi olemasolevatest kasutajatest mitte lihtsalt faili kirjutamist ja lugemist, siis saaks ka rohkem kasutajaid võrrelda ning parooli ei kontrollita. Kasutajaliidese klassi testiti tervikuna ning konto funktsioonide testimine töötas katse eksitusmeetodiga
+
+
+
