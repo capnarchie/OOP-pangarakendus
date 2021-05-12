@@ -2,13 +2,13 @@ oop/MustRuut.java
  oop.MustRuut
 oop/Inimene.java
  oop.Inimene
-oop/Main.java
- oop.Main
-oop/Konto.java
- oop.Konto
 oop/lühikeKontonrErind.java
  oop.lühikeKontonrErind
 oop/KasutajaLiides.java
  oop.KasutajaLiides
 module-info.java
  module-info
+oop/Konto.java
+ oop.Konto
+oop/Main.java
+ oop.Main

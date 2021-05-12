@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OOP-pangarakendus.iml" filepath="$PROJECT_DIR$/OOP-pangarakendus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OOP-pangarakendus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/OOP-pangarakendus.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OOP-pangarakendus.test.iml" filepath="$PROJECT_DIR$/.idea/modules/OOP-pangarakendus.test.iml" />
     </modules>
   </component>
 </project>
