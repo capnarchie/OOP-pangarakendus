@@ -1,9 +1,12 @@
+package oop;
+
+import javafx.stage.Stage;
+
 import java.util.Scanner;
 
 public class Konto extends Inimene{
-    double kontojääk;
+    protected double kontojääk;
     double eelmineÜlekanne;
-
     public Konto(String kasutajaNimi, String kontonr) {
         super(kasutajaNimi, kontonr);
     }
@@ -12,31 +15,34 @@ public class Konto extends Inimene{
         return kontonr;
     }
 
-    void rahaÜlekanne(double kogus){
+    double rahaÜlekanne(double kogus){
         if (kogus != 0){
             kontojääk = kontojääk + kogus;
             eelmineÜlekanne = kogus;
         }
+        return kontojääk;
     }
 
-    void võtanRahavälja(double kogus){
+    double võtanRahavälja(double kogus){
         if (kogus != 0){
             kontojääk = kontojääk - kogus;
             eelmineÜlekanne = -kogus;
         }
+        return kontojääk;
     }
 
-    void näitaÜlekannet(){
+    String näitaÜlekannet(){
         if (eelmineÜlekanne > 0) {
-            System.out.println("kandsite kontole " + eelmineÜlekanne + "eurot");
+            return "kandsite kontole " + eelmineÜlekanne + "eurot";
         }else if (eelmineÜlekanne < 0){
-            System.out.println("võtsite kontolt välja " + Math.abs(eelmineÜlekanne) + "eurot");
-        }else System.out.println("Ülekannet pole veel toimunud");
+            return "võtsite kontolt välja " + Math.abs(eelmineÜlekanne) + "eurot";
+        }else return "Ülekannet pole veel toimunud";
     }
 
 
-    void näitavalikuid() {
-        Scanner sc = new Scanner(System.in);
+    void näitavalikuid(){
+
+       /* Scanner sc = new Scanner(System.in);
         System.out.println("Tere tulemast " + Main.misPank(kontonr) + " pangalehele " + kasutajaNimi);
         System.out.println("Teie kontonr on " + kontonr);
         System.out.println("Mida te soovite teha?");
@@ -78,7 +84,16 @@ public class Konto extends Inimene{
             }
         }
         while (vastus != 5);
-        System.out.println("Logisite välja");
+        System.out.println("Logisite välja");*/
     }
 
+    @Override
+    public String toString() {
+        return "Konto{" +
+                "kasutajaNimi='" + kasutajaNimi + '\'' +
+                ", kontonr='" + kontonr + '\'' +
+                ", kontojääk=" + kontojääk +
+                ", eelmineÜlekanne=" + eelmineÜlekanne +
+                '}';
+    }
 }

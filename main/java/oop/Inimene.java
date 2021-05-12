@@ -1,3 +1,5 @@
+package oop;
+
 public class Inimene{
     String kasutajaNimi;
     String kontonr;

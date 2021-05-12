@@ -1,3 +1,5 @@
+package oop;
+
 import javax.swing.*;
 
 public class Main {
