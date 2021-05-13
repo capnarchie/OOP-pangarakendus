@@ -22,3 +22,6 @@ Uku lõi klassi Konto ning sellega vajalikud asjad main klassi ning Mairi lõi M
 Circa kulus Ukul 4h tööle.
 
 Mairi lõi klassi Inimene ja sidus selle Konto klassiga, et oleks arusaaadavam. MAiril kulus tööks umbes 5h, sest oli palju mõtlemist.
+
+
+Palun "git checkout Projekt2", et rühmatöö nr 2 vaadata.
